@@ -1,0 +1,13 @@
+
+<div *ngIf="bucketlist">
+
+  <h2>{{bucketlist.wish | uppercase}} Details</h2>
+  <div><span>age: </span>{{bucketlist.age}}</div>
+  <div>
+    <label>wish:
+      <input [(ngModel)]="bucketlist.wish" placeholder="wish"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

@@ -1,0 +1,13 @@
+<div age="search-component">
+  <h4><label for="search-box">Bucketlist Search</label></h4>
+
+  <input #searchBox age="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let bucketlist of bucketlists$ | async" >
+      <a routerLink="/detail/{{bucketlist.age}}">
+        {{bucketlist.wish}}
+      </a>
+    </li>
+  </ul>
+</div>

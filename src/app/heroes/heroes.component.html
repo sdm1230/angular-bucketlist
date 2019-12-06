@@ -1,0 +1,21 @@
+<h2>My Bucketlists</h2>
+
+<div>
+  <label>Bucketlist wish:
+    <input #bucketlistWish />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(bucketlistWish.value); bucketlistWish.value=''">
+    add
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let bucketlist of bucketlists">
+    <a routerLink="/detail/{{bucketlist.age}}">
+      <span class="badge">{{bucketlist.age}}</span> {{bucketlist.wish}}
+    </a>
+    <button class="delete" title="delete bucketlist"
+      (click)="delete(bucketlist)">x</button>
+  </li>
+</ul>

@@ -1,0 +1,11 @@
+<h3>Top Bucketlists</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let bucketlist of bucketlists" class="col-1-4"
+      routerLink="/detail/{{bucketlist.age}}">
+    <div class="module bucketlist">
+      <h4>{{bucketlist.wish}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-bucketlist-search></app-bucketlist-search>
